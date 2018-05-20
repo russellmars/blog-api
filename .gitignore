@@ -1,0 +1,10 @@
+# editor config files
+.vscode
+.idea
+
+# dependencies
+node_modules
+
+# dependencies lock file
+package-lock.json
+yarn.lock
