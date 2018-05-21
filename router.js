@@ -13,8 +13,10 @@ router.delete('/article', article.destroy);
 router.get('/article/:_id', article.show);
 router.put('/article/:_id', article.update);
 
-const tag = controllers.tag
-router.get('/tag', tag.index)
-router.post('/tag', tag.create)
+const tag = controllers.tag;
+router.get('/tag', tag.index);
+router.post('/tag', tag.create);
 
+const qiniu = controllers.qiniu;
+router.get('/qiniu', qiniu.index);
 module.exports = router;

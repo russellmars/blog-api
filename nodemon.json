@@ -1,3 +1,7 @@
 {
-  "verbose": true
+  "verbose": true,
+  "ignore": [
+    ".git",
+    ".vscode"
+  ]
 }

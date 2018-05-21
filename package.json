@@ -4,7 +4,9 @@
   "description": "blog api server",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js --config nodemon.json",
+    "start": "cross-env NODE_ENV=production pm2 index.js",
+    "dev": "cross-env NODE_ENV=development pm2 index.js",
+    "local": "cross-env NODE_ENV=local nodemon index.js --ships=4 --config nodemon.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,6 +15,7 @@
   "author": "russellmars@sina.com",
   "dependencies": {
     "@koa/cors": "^2.2.1",
+    "cross-env": "^5.1.5",
     "dayjs": "^1.6.2",
     "jsonwebtoken": "^8.2.1",
     "koa": "^2.5.1",
@@ -20,7 +23,8 @@
     "koa-router": "^7.4.0",
     "lodash": "^4.17.10",
     "mongoose": "^5.1.1",
-    "mongoose-paginate": "^5.0.3"
+    "mongoose-paginate": "^5.0.3",
+    "qiniu": "^7.1.7"
   },
   "devDependencies": {
     "nodemon": "^1.17.4"

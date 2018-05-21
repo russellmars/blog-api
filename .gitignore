@@ -5,6 +5,9 @@
 # dependencies
 node_modules
 
-# dependencies lock file
+# dependencies lock files
 package-lock.json
 yarn.lock
+
+# config files
+config
