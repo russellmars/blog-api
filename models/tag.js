@@ -7,7 +7,7 @@ const tagSchema = new mongoose.Schema({
     maxlength: 20
   },
   // 别名
-  slug: {
+  alias: {
     type: String,
     required: true,
     maxlength: 10

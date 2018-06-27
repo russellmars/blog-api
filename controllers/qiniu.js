@@ -7,7 +7,8 @@ const mac = new qiniu.auth.digest.Mac(
   config.qiniu_secret_key
 );
 const options = {
-  scope: config.qiniu_bucket
+  scope: config.qiniu_bucket,
+  returnBody: '{"key":"$(key)${ext}","hash":"$(etag)","fsize":$(fsize)}'
 };
 const putPolicy = new qiniu.rs.PutPolicy(options);
 

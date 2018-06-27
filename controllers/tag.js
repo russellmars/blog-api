@@ -34,7 +34,7 @@ class TagController extends BaseController {
     const keywordReg = new RegExp(keyword)
     dbQuery.$or = [
       { 'name': keywordReg },
-      { 'slug': keywordReg },
+      { 'alias': keywordReg },
       { 'description': keywordReg }
     ]
 
